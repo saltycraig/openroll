@@ -1,7 +1,7 @@
 #include "scoreboard.h"
 #include "ui_scoreboard.h"
-#ifdef QT_DEBUG
-#include "logger.h"
+#ifdef LOGGER
+    #include "logger.h"
 #endif
 #include <QDebug>
 

@@ -1,7 +1,7 @@
 #include "controls.h"
 #include <QApplication>
-#ifdef QT_DEBUG
-#include "logger.h"
+#ifdef LOGGER
+  #include "logger.h"
 #endif
 #include <QDebug>
 
@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
                    &Controls::onAboutToQuit);
   controls.show();
 
-#ifdef QT_DEBUG
+#ifdef LOGGER
   qInfo() << "Using log file named: " << logger::filename;
   logger::attach();
 #endif
